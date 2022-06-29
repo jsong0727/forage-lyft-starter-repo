@@ -1,4 +1,4 @@
-from abc import abstractmethod
+
 from battery import Battery
 from engine import Engine
 
@@ -8,6 +8,5 @@ class Car:
         self.engine = Engine
         self.battery = Battery
 
-    @abstractmethod
     def needs_service(self):
-        pass
+        return self.engine.needs_service() or self.battery.needs_service()
