@@ -1,10 +1,9 @@
-
-from battery import Battery
-from engine import Engine
+from battery.battery import Battery
+from engine.engine import Engine
 
 
 class Car:
-    def __init__(self):
+    def __init__(self, engine, battery):
         self.engine = Engine
         self.battery = Battery
 
